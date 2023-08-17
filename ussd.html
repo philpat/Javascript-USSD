@@ -66,9 +66,9 @@ if (procedure === ussd) {
           let amount = prompt("Input amount");
           let accountName = prompt("Input account number");
           alert(`You want to transfer ${amount} to ${accountName}`);
-          let transferPin = prompt(`Please enter your pin`);
+          selectPin = prompt(`Please enter your pin`);
           
-          if (transferPin == pin) {
+          if (selectPin == pin) {
             alert("Transfer successful");
           } else {
             alert("Invalid Pin");
@@ -93,7 +93,8 @@ if (procedure === ussd) {
         
         if (dataType === "1" || dataType === "2" || dataType === "3") {
           let dataPhone = prompt("Please input phone number");
-          alert(`You want to recharge to ${dataPhone}`);
+          alert(`You want to recharge ${dataType} to ${dataPhone}`);
+          alert(`Recharge Successful`);
         }
       }
     } else {
