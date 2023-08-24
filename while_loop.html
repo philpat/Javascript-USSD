@@ -9,6 +9,104 @@
 
 <body>
   <script>
+  //   let ussd = "*329#";
+  //   let accountBalance = 20000;
+  //   let pin = 1234;
+
+  //   let procedure = prompt("Please select ussd code");
+
+  //   if (procedure == ussd) {
+  //     let acceptOrCancel = prompt(`Welcome to ussd banking.
+  // Please note that a service fee of N6 network charge will be applied to your
+  // account for banking services on this channel.
+  // 1. Accept
+  // 2. Cancel`);
+
+  //     if (acceptOrCancel == "1") {
+  //       let bankOptions;
+  //       while (true) {
+  //         bankOptions = prompt(`Welcome to FCMB.
+  //     1. Check Balance
+  //     2. Airtime
+  //     3. Transfer
+  //     4. Data`);
+
+  //         if (bankOptions == "1") {
+  //           alert(`Your balance is ${accountBalance}`);
+  //         } else if (bankOptions == "2") {
+  //           let airtimeChoice = prompt(`Please select your network:
+  //     1. To self
+  //     2. To others`);
+  //           if (airtimeChoice == "1") {
+  //             prompt(`Please input amount`);
+  //             alert("Airtime recharge successful");
+  //           } else if (airtimeChoice == "2") {
+  //             let phoneNumber = prompt("Please input phone number");
+  //             let amountRecharge = prompt("Please input amount");
+  //             alert(`You want to recharge ${amountRecharge} to ${phoneNumber}`);
+  //             let selectPin = prompt(`Please enter your pin`);
+
+  //             if (selectPin == pin) {
+  //               alert("Amount recharge successful");
+  //             } else {
+  //               alert("Invalid Pin");
+  //             }
+  //           } else {
+  //             alert("Invalid choice");
+  //           }
+  //         } else if (bankOptions == "3") {
+  //           let transfer = prompt(`1. Savings 2. Current`);
+  //           if (transfer == "1" || transfer == "2") {
+  //             let bankType = prompt(`Please select bank:
+  //       1. FCMB
+  //       2. Access
+  //       3. Gtb`);
+
+  //             if (bankType == "1" || bankType == "2" || bankType == "3") {
+  //               let amount = prompt("Input amount");
+  //               let accountName = prompt("Input account number");
+  //               alert(`You want to transfer ${amount} to ${accountName}`);
+  //               selectPin = prompt(`Please enter your pin`);
+
+  //               if (selectPin == pin) {
+  //                 alert("Transfer successful");
+  //               } else {
+  //                 alert("Invalid Pin");
+  //               }
+  //             } else {
+  //               alert("Invalid bank selection");
+  //             }
+  //           } else {
+  //             alert("Unknown Application");
+  //           }
+  //         } else if (bankOptions == "4") {
+  //           let network = prompt(`Please select Network:
+  //     1. Airtel
+  //     2. Mtn
+  //     3. Glo`);
+
+  //           if (network == "1" || network == "2" || network == "3") {
+  //             let dataType = prompt(`Please select a plan:
+  //       1. 1000 for 1.5gig
+  //       2. 2000 for 2gig
+  //       3. 3500 for 6.5gig`);
+
+  //             if (dataType == "1" || dataType == "2" || dataType == "3") {
+  //               let dataPhone = prompt("Please input phone number");
+  //               alert(`You want to recharge ${dataType} to ${dataPhone}`);
+  //               alert(`Recharge Successful`);
+  //             }
+  //           }
+  //         } else {
+  //           alert("Transaction canceled.");
+  //         }
+  //       }
+  //     } else {
+  //       alert("Unknown Application");
+  //     }
+  //   } else {
+  //     alert("Please enter a valid pin");
+  //   }
     let ussd = "*329#";
     let accountBalance = 20000;
     let pin = 1234;
@@ -23,84 +121,90 @@
   2. Cancel`);
 
       if (acceptOrCancel == "1") {
-        let bankOptions;
-        while (true) {
-          bankOptions = prompt(`Welcome to FCMB.
+        // let bankOptions;
+        // while (true) {
+         let bankOptions = prompt(`Welcome to FCMB.
       1. Check Balance
       2. Airtime
       3. Transfer
-      4. Data`);
+      4. Data
+      5. Exit`);
 
-          if (bankOptions == "1") {
-            alert(`Your balance is ${accountBalance}`);
-          } else if (bankOptions == "2") {
-            let airtimeChoice = prompt(`Please select your network:
-      1. To self
-      2. To others`);
-            if (airtimeChoice == "1") {
-              prompt(`Please input amount`);
-              alert("Airtime recharge successful");
-            } else if (airtimeChoice == "2") {
-              let phoneNumber = prompt("Please input phone number");
-              let amountRecharge = prompt("Please input amount");
-              alert(`You want to recharge ${amountRecharge} to ${phoneNumber}`);
-              let selectPin = prompt(`Please enter your pin`);
+      while(bankOptions !=="5"){
 
+        if (bankOptions == "1") {
+          alert(`Your balance is ${accountBalance}`);
+        } else if (bankOptions == "2") {
+          let airtimeChoice = prompt(`Please select your network:
+    1. To self
+    2. To others`);
+          if (airtimeChoice == "1") {
+            prompt(`Please input amount`);
+            alert("Airtime recharge successful");
+          } else if (airtimeChoice == "2") {
+            let phoneNumber = prompt("Please input phone number");
+            let amountRecharge = prompt("Please input amount");
+            alert(`You want to recharge ${amountRecharge} to ${phoneNumber}`);
+            let selectPin = prompt(`Please enter your pin`);
+  
+            if (selectPin == pin) {
+              alert("Amount recharge successful");
+            } else {
+              alert("Invalid Pin");
+            }
+          } else {
+            alert("Invalid choice");
+          }
+        } else if (bankOptions == "3") {
+          let transfer = prompt(`1. Savings 2. Current`);
+          if (transfer == "1" || transfer == "2") {
+            let bankType = prompt(`Please select bank:
+      1. FCMB
+      2. Access
+      3. Gtb`);
+  
+            if (bankType == "1" || bankType == "2" || bankType == "3") {
+              let amount = prompt("Input amount");
+              let accountName = prompt("Input account number");
+              alert(`You want to transfer ${amount} to ${accountName}`);
+              selectPin = prompt(`Please enter your pin`);
+  
               if (selectPin == pin) {
-                alert("Amount recharge successful");
+                alert("Transfer successful");
               } else {
                 alert("Invalid Pin");
               }
             } else {
-              alert("Invalid choice");
-            }
-          } else if (bankOptions == "3") {
-            let transfer = prompt(`1. Savings 2. Current`);
-            if (transfer == "1" || transfer == "2") {
-              let bankType = prompt(`Please select bank:
-        1. FCMB
-        2. Access
-        3. Gtb`);
-
-              if (bankType == "1" || bankType == "2" || bankType == "3") {
-                let amount = prompt("Input amount");
-                let accountName = prompt("Input account number");
-                alert(`You want to transfer ${amount} to ${accountName}`);
-                selectPin = prompt(`Please enter your pin`);
-
-                if (selectPin == pin) {
-                  alert("Transfer successful");
-                } else {
-                  alert("Invalid Pin");
-                }
-              } else {
-                alert("Invalid bank selection");
-              }
-            } else {
-              alert("Unknown Application");
-            }
-          } else if (bankOptions == "4") {
-            let network = prompt(`Please select Network:
-      1. Airtel
-      2. Mtn
-      3. Glo`);
-
-            if (network == "1" || network == "2" || network == "3") {
-              let dataType = prompt(`Please select a plan:
-        1. 1000 for 1.5gig
-        2. 2000 for 2gig
-        3. 3500 for 6.5gig`);
-
-              if (dataType == "1" || dataType == "2" || dataType == "3") {
-                let dataPhone = prompt("Please input phone number");
-                alert(`You want to recharge ${dataType} to ${dataPhone}`);
-                alert(`Recharge Successful`);
-              }
+              alert("Invalid bank selection");
             }
           } else {
-            alert("Transaction canceled.");
+            alert("Unknown Application");
           }
+        } else if (bankOptions == "4") {
+          let network = prompt(`Please select Network:
+    1. Airtel
+    2. Mtn
+    3. Glo`);
+  
+          if (network == "1" || network == "2" || network == "3") {
+            let dataType = prompt(`Please select a plan:
+      1. 1000 for 1.5gig
+      2. 2000 for 2gig
+      3. 3500 for 6.5gig`);
+  
+            if (dataType == "1" || dataType == "2" || dataType == "3") {
+              let dataPhone = prompt("Please input phone number");
+              alert(`You want to recharge ${dataType} to ${dataPhone}`);
+              alert(`Recharge Successful`);
+            }
+          }
+        } else {
+          alert("Transaction canceled.");
         }
+        break;
+      }
+
+        // }
       } else {
         alert("Unknown Application");
       }

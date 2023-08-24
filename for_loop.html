@@ -104,18 +104,25 @@
            {
           }
         }
-        if (i < 2) {
-          alert(`Invalid Pin. You have ${2 - i} attempts remaining.`);
-        } else {
-          alert("Invalid Pin. Maximum attempts reached.");
+        // if (i < 2) {
+        //   alert(`Invalid Pin. You have ${2 - i} attempts remaining.`);
+        // } else {
+        //   alert("Invalid Pin. Maximum attempts reached.");
           
-        }
+        // }
+        
       } else {
         alert("Unknown Application");
       }
     } else {
       alert("Please enter a valid pin");
     }
+    if (i < 2) {
+          alert(`Invalid Pin. You have ${2 - i} attempts remaining.`);
+        } else {
+          alert("Invalid Pin. Maximum attempts reached.");
+          
+        }
 
   </script>
 </body>
